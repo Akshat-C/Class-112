@@ -1,0 +1,83 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js" target="_blank"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="icon" href="Emoji Title.png"><title>Emotion Recogniser</title>
+
+</head>
+
+<body class="bg-primary">
+
+<div class="container">
+
+<center>
+    
+<div class="heading btn btn-info" style="margin-top: 20px; border-radius: 15px;">
+<h2 style="letter-spacing: 5px; padding: 2px;">
+EMOTION RECOGNISER
+<br><br>
+<span>&#128522;</span>
+<span>&#128512;</span>
+<span>&#128532;</span>
+<span>&#128546;</span>
+<span>&#128545;</span>
+<span>&#128548;</span>
+</h2>
+</div>
+
+<h4>Take Your Selfie to Generate Emoji</h4>
+<h4>Are you Happy, Sad or Angry</h4>
+
+<div id="webcam_div" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+<h5 style="font-weight: bold;">Webcam View- </h5>
+<div id="camera"></div>
+<br><br>
+<button class="btn btn-success" onclick="take_img()">Capture Image</button>
+
+</div>
+
+<div id="prediction_div" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+<div>
+<h5 style="font-weight: bold; background-color:lightgreen; width:100px !important; color: black;">Prediction 1:<br></h5>
+<h4 id="emoji1_name"></h4>
+<br>
+<h2 id="emoji1_img"></h2>
+</div>
+
+<div>
+<h5 style="font-weight: bold; background-color:lightgreen; width:100px !important; color: black;">Prediction 2:<br></h5>
+<h4 id="emoji2_name"></h4>
+<br>
+<h2 id="emoji2_img"></h2>
+</div>
+
+</div>
+
+<div id="results_div" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+    <h5 style="font-weight: bold;">Snapshot- </h5>
+    <div id="results"></div>
+    <br><br>
+    <button class="btn btn-warning" onclick="result()">Predict Emotion</button>
+
+</div>
+
+</center>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>
